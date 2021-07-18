@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+:root {
+  --color-black: #333;
+  --color-black2: #333;
+  --color-white: #fff;
+  --color-white2: #fff;
+}
+
+.dark {
+  --color-black: #fff;
+  --color-black2: #444;
+  --color-white: #333;
+  --color-white2: #444;
+
+  p {
+    color: var(--color-black) !important;
+  }
+
+  .themeSwitch::before {
+    content: '\f185' !important;
+    font-family: fontAwesome !important;
+  }
+
+  .themeSwitch::after {
+    content: 'Switch to Light mode' !important;
+  }
+
+  .nav {
+    border-left: 1px solid rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .main .topbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .btn:hover {
+    background: #2196f3 !important;
+  }
+
+  .socialMedias li a:hover {
+    background: #2196f3 !important;
+  }
+
+  .services .content .serviceBox img {
+    filter: invert(1) !important;
+  }
+
+  .services .content .serviceBox:hover {
+    background: #2196f3 !important;
+  }
+
+  .projects .content .workBox .textBx {
+    background: #444 !important;
+  }
+
+  .testimonials .content .testimonialsBox:hover {
+    background: #2196f2 !important;
+  }
+
+  .contact .contactForm .row2 input[type="submit"]:hover {
+    background: #2196f2 !important;
+  }
+
+}
+
+body {
+  overflow-x: hidden;
+}
