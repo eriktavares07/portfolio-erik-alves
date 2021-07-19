@@ -12,7 +12,7 @@
 
 
 :root {
-  --color-black: #333;
+  --color-black: #3b3b3b;
   --color-black2: #333;
   --color-white: #fff;
   --color-white2: #fff;
@@ -21,8 +21,9 @@
 .dark {
   --color-black: #fff;
   --color-black2: #444;
-  --color-white: #333;
-  --color-white2: #444;
+  --color-white: #3b3b3b;
+  --color-white2: #3f3f3f;
+  background-color: var(--color-white);
 
   p {
     color: var(--color-black) !important;
@@ -43,10 +44,6 @@
 
   .main .topbar {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5) !important;
-  }
-
-  .btn:hover {
-    background: #2196f3 !important;
   }
 
   .socialMedias li a:hover {

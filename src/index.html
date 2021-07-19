@@ -13,8 +13,26 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body class="dark">
     <app-root></app-root>
+    <script>
+      var $container = $(".container");
+      var $drone = $(".drone");
+      var droneCenter = {
+        x: $drone.width() / 2,
+        y: $drone.height() / 2,
+      };
+
+      $container.on("mousemove", function (event) {
+        $drone.css(
+          "transform",
+          `translate3d(${event.offsetX - droneCenter.x}px, ${
+            event.offsetY - droneCenter.y
+          }px, 0)`
+        );
+      });
+    </script>
   </body>
 </html>

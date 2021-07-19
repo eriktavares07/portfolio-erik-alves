@@ -6,13 +6,7 @@ import { AfterViewInit, Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
-  title = 'portfolio-erik-alves';
-
-  ngAfterViewInit() {
-    let toggle = document.querySelector('.toggle');
-    let topbar = document.querySelector('.topbar');
-    let nav = document.querySelector('.nav');
-  }
+  ngAfterViewInit() {}
 
   onToggleClick() {
     let toggle = document.querySelector('.toggle');
@@ -41,6 +35,17 @@ export class AppComponent implements AfterViewInit {
     let body = document.querySelector('body');
     if (themeSwitch !== null && body !== null) {
       body.classList.toggle('dark');
+    }
+  }
+
+  onMouseMove(event: any) {
+    const button = document.querySelector<HTMLElement>('.banner');
+
+    if (button) {
+      const readout = document.querySelector('p');
+      const { x, y } = button.getBoundingClientRect();
+      button.style.setProperty('--x', `${event.clientX - x}`);
+      button.style.setProperty('--y', `${event.clientY - y}`);
     }
   }
 }
