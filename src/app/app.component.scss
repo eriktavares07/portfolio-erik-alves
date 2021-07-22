@@ -26,13 +26,19 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px 0px;
 }
 
 .nav ul li {
   position: relative;
   width: 100%;
   list-style: none;
+  padding-left: 20px;
+}
+
+.nav ul li.active {
+  border-left: 5px solid #51FF0D;
+  padding-left: 18px;
 }
 
 .nav ul li a {
@@ -54,6 +60,7 @@
 .nav ul li a:hover {
   opacity: 1;
 }
+
 
 .main {
   position: absolute;
@@ -153,9 +160,61 @@ section {
   align-items: flex-start;
   justify-content: center;
   z-index: 1000;
-  animation: fadeInAnimation ease 3s;
+  /*animation-name: stretch;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation-fill-mode: none;
+  animation-play-state: running;*/
+
+  .typewriter {
+    color: var(--color-black);
+    overflow: hidden;
+    border-right: .15em solid #51FF0D;
+    white-space: nowrap;
+    font-size: 80px;
+    font-weight: 700;
+    padding-right: 20px;
+    animation:
+      typing 2s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0
+    }
+
+    to {
+      width: 100%
+    }
+  }
+
+  @keyframes blink-caret {
+
+    from,
+    to {
+      border-color: transparent
+    }
+
+    50% {
+      border-color: #51FF0D
+    }
+  }
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+  }
+
+  50% {}
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .banner .imgBack {
@@ -202,6 +261,13 @@ p {
   margin-top: 10px;
   text-decoration: none;
   color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.btn.active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .socialMedias {
@@ -229,7 +295,7 @@ p {
 }
 
 .socialMedias li a:hover {
-  background: var(--color-black2);
+  background: #51FF0D;
   color: #fff;
 }
 
@@ -559,7 +625,25 @@ p {
   justify-content: center;
   font-size: 14px;
   color: #fff;
-  transform: rotate(180);
+  animation: MoveUpDown 1.5s linear infinite;
+}
+
+.scroll-down span {
+  transform: rotate(90deg);
+  padding-right: 40px;
+}
+
+
+@keyframes MoveUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
 }
 
 @keyframes fadeInAnimation {
@@ -578,8 +662,9 @@ p {
     left: 20px;
   }
 
-  h1 {
-    font-size: 43px;
+  h1,
+  .typewriter {
+    font-size: 30px !important;
   }
 
   .main .topbar {
@@ -748,6 +833,7 @@ p {
   }
 }
 
+
 .hvr-wobble-vertical {
   display: inline-block;
   vertical-align: middle;
@@ -758,7 +844,8 @@ p {
 
 .hvr-wobble-vertical:hover,
 .hvr-wobble-vertical:focus,
-.hvr-wobble-vertical:active {
+.hvr-wobble-vertical:active,
+.hvr-wobble-vertical.hover {
   -webkit-animation-name: hvr-wobble-vertical;
   animation-name: hvr-wobble-vertical;
   -webkit-animation-duration: 1s;

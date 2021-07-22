@@ -1,12 +1,44 @@
 <div class="container">
   <div class="nav">
     <ul>
-      <li><a href="#banner" (click)="toogleMenu()">Home</a></li>
-      <li><a href="#about" (click)="toogleMenu()">About</a></li>
-      <li><a href="#services" (click)="toogleMenu()">Services</a></li>
-      <li><a href="#projects" (click)="toogleMenu()">Project</a></li>
-      <li><a href="#testimonials" (click)="toogleMenu()">Testimonials</a></li>
-      <li><a href="#contact" (click)="toogleMenu()">Contact</a></li>
+      <li
+        id="home-link"
+        class="nav-item active"
+        (click)="activeLink('home-link')"
+      >
+        <a href="#banner" (click)="toogleMenu()">Home</a>
+      </li>
+      <li id="about-link" class="nav-item" (click)="activeLink('about-link')">
+        <a href="#about" (click)="toogleMenu()">About</a>
+      </li>
+      <li
+        id="services-link"
+        class="nav-item"
+        (click)="activeLink('services-link')"
+      >
+        <a href="#services" (click)="toogleMenu()">Services</a>
+      </li>
+      <li
+        id="project-link"
+        class="nav-item"
+        (click)="activeLink('project-link')"
+      >
+        <a href="#projects" (click)="toogleMenu()">Project</a>
+      </li>
+      <li
+        id="testimonials-link"
+        class="nav-item"
+        (click)="activeLink('testimonials-link')"
+      >
+        <a href="#testimonials" (click)="toogleMenu()">Testimonials</a>
+      </li>
+      <li
+        id="contact-link"
+        class="nav-item"
+        (click)="activeLink('contact-link')"
+      >
+        <a href="#contact" (click)="toogleMenu()">Contact</a>
+      </li>
     </ul>
     <div class="themeSwitch" (click)="switchTheme()"></div>
   </div>
@@ -23,45 +55,12 @@
 
     <section class="banner" id="banner">
       <div class="content">
-        <h1>
-          <span class="hvr-wobble-vertical">H</span>
-          <span class="hvr-wobble-vertical">i</span>
-          <span class="hvr-wobble-vertical">,</span>
-        </h1>
-        <h1>
-          <span class="hvr-wobble-vertical">I</span>
-          <span class="hvr-wobble-vertical">'</span>
-          <span class="hvr-wobble-vertical">m</span>
-          <span class="hvr-wobble-vertical">&nbsp;</span>
-          <span class="hvr-wobble-vertical">E</span>
-          <span class="hvr-wobble-vertical">r</span>
-          <span class="hvr-wobble-vertical">i</span>
-          <span class="hvr-wobble-vertical">k</span>
-        </h1>
-        <h1>
-          <span class="hvr-wobble-vertical">F</span>
-          <span class="hvr-wobble-vertical">u</span>
-          <span class="hvr-wobble-vertical">l</span>
-          <span class="hvr-wobble-vertical">l</span>
-          <span class="hvr-wobble-vertical">&nbsp;</span>
-          <span class="hvr-wobble-vertical">S</span>
-          <span class="hvr-wobble-vertical">t</span>
-          <span class="hvr-wobble-vertical">a</span>
-          <span class="hvr-wobble-vertical">c</span>
-          <span class="hvr-wobble-vertical">k</span>
-          <span class="hvr-wobble-vertical">&nbsp;</span>
-          <span class="hvr-wobble-vertical">D</span>
-          <span class="hvr-wobble-vertical">e</span>
-          <span class="hvr-wobble-vertical">v</span>
-          <span class="hvr-wobble-vertical">e</span>
-          <span class="hvr-wobble-vertical">l</span>
-          <span class="hvr-wobble-vertical">o</span>
-          <span class="hvr-wobble-vertical">p</span>
-          <span class="hvr-wobble-vertical">e</span>
-          <span class="hvr-wobble-vertical">r</span>
-        </h1>
-        <p>I'm a Creative Front End WebDeveloper.</p>
-        <a href="#" class="btn hvr-bounce-to-right"> Download My CV</a>
+        <h1 id="hi_title">Hi,</h1>
+        <h1 id="i_am_title">I'm Erik</h1>
+        <h1 id="role_title">Full Stack Developer</h1>
+        <a id="download-cv-btn" href="#" class="btn hvr-bounce-to-right">
+          Download My CV</a
+        >
         <ul class="socialMedias">
           <li>
             <a href="#"><em class="fa fa-github" aria-hidden="true"></em></a>
@@ -73,7 +72,11 @@
       </div>
       <div class="scroll-down">
         <span>scroll down</span>
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        <em
+          style="padding-top: 15px"
+          class="fa fa-arrow-down"
+          aria-hidden="true"
+        ></em>
       </div>
     </section>
 
