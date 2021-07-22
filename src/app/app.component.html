@@ -18,6 +18,9 @@
       >
         <a href="#services" (click)="toogleMenu()">Services</a>
       </li>
+      <li id="skills-link" class="nav-item" (click)="activeLink('skills-link')">
+        <a href="#skills" (click)="toogleMenu()">Skills</a>
+      </li>
       <li
         id="project-link"
         class="nav-item"
@@ -46,7 +49,7 @@
     <div class="topbar">
       <a href="#" class="logo">Erik</a>
       <div class="toggle" (click)="onToggleClick()">
-        <em class="fa fa-bars" aria-hidden="true"></em>
+        <span id="hamburguer"> </span>
       </div>
     </div>
 
@@ -175,6 +178,50 @@
       </div>
     </section>
 
+    <!-- Skills -->
+    <section class="skills adjust" id="skills">
+      <div class="title">
+        <h2>Skills</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem sint
+          accusantium magnam laboriosam cupiditate.
+        </p>
+      </div>
+      <div class="content">
+        <div class="skills_data">
+          <div class="skills_name">
+            <em class="fa fa-html5 skills_icon" aria-hidden="true"></em>
+            <span class="skills_name">HTML5</span>
+          </div>
+          <div><span class="skills_percentage">95%</span></div>
+          <div class="skills_bar skills_html"></div>
+        </div>
+        <div class="skills_data">
+          <div class="skills_name">
+            <em class="fa fa-html5 skills_icon" aria-hidden="true"></em>
+            <span class="skills_name">Java</span>
+          </div>
+          <div><span class="skills_percentage">95%</span></div>
+          <div class="skills_bar skills_java"></div>
+        </div>
+        <div class="skills_data">
+          <div class="skills_name">
+            <em class="fa fa-css3 skills_icon" aria-hidden="true"></em>
+            <span class="skills_name">CSS3</span>
+          </div>
+          <div><span class="skills_percentage">80%</span></div>
+          <div class="skills_bar skills_css"></div>
+        </div>
+        <div class="skills_data">
+          <div class="skills_name">
+            <em class="fa fa-html5 skills_icon" aria-hidden="true"></em>
+            <span class="skills_name">JavaScript</span>
+          </div>
+          <div><span class="skills_percentage">95%</span></div>
+          <div class="skills_bar skills_js"></div>
+        </div>
+      </div>
+    </section>
     <!-- Projects -->
     <section class="projects adjust" id="projects">
       <div class="title">

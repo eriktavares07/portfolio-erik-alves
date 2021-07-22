@@ -115,8 +115,8 @@
 
 .main .topbar .toggle {
   position: relative;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -272,7 +272,7 @@ p {
 
 .socialMedias {
   position: absolute;
-  bottom: 20px;
+  bottom: 3rem;
   display: flex;
 }
 
@@ -392,6 +392,66 @@ p {
 
 .services .content .serviceBox p {
   text-align: center;
+}
+
+.skills .content {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  .skills_data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: 400;
+    padding: .5rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 4px 25px #51FF0D;
+  }
+
+  .skills_icon {
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: var(--color-black);
+  }
+
+  .skills_name {
+    display: flex;
+    align-items: center;
+  }
+
+  .skills_bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #51FF0D;
+    height: .25rem;
+    border-radius: .5rem;
+    z-index: 1000;
+  }
+
+  .skills_html {
+    width: 95%;
+  }
+
+  .skills_java {
+    width: 10%;
+  }
+
+  .skills_css {
+    width: 50%;
+  }
+
+  .skills_js {
+    width: 85%;
+  }
+
+  .skills_img {
+    border-radius: .5rem;
+  }
 }
 
 .projects .content {
@@ -617,8 +677,8 @@ p {
 
 .scroll-down {
   position: absolute;
-  right: 10px;
-  bottom: 2rem;
+  right: 30px;
+  bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -629,8 +689,7 @@ p {
 }
 
 .scroll-down span {
-  transform: rotate(90deg);
-  padding-right: 40px;
+  writing-mode: vertical-rl;
 }
 
 
@@ -667,6 +726,10 @@ p {
     font-size: 30px !important;
   }
 
+  .topbar .logo {
+    display: none;
+  }
+
   .main .topbar {
     display: flex;
   }
@@ -701,7 +764,51 @@ p {
   .main .topbar {
     width: 100%;
     left: 0;
-    padding: 0 20px;
+    padding: 50px 20px;
+    background: transparent;
+    border: none;
+    justify-content: flex-end !important;
+  }
+
+  .topbar .toggle {
+    border: 1px solid #51FF0D;
+    border-radius: 15px;
+  }
+
+  #hamburguer {
+    margin: .5rem 0;
+    border-top: 2px solid #fff;
+  }
+
+  #hamburguer::after,
+  #hamburguer::before {
+    content: '';
+    color: #fff;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+  }
+
+  .topbar .toggle.active #hamburguer {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  .topbar .toggle.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+
+  .topbar .toggle.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  .dark .main .topbar {
+    border-bottom: none !important;
   }
 
   .navigation ul {
@@ -745,6 +852,10 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .skills .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -761,6 +872,10 @@ p {
   }
 
   .contact .contactForm .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .skills .content {
     grid-template-columns: repeat(1, 1fr);
   }
 
