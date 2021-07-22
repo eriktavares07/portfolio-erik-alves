@@ -6,9 +6,32 @@
     <base href="/portfolio-erik-alves/"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <link rel="stylesheet" href="styles.552655be8a8058721572.css"></head>
-  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.3b697074f8b114d69ccd.css"></head>
+  <body class="dark">
     <app-root></app-root>
-  <script src="runtime.0e49e2b53282f40c8925.js" defer></script><script src="polyfills.8c151b8375e767ff858f.js" defer></script><script src="main.f3dafd08f2aaa0a0dedc.js" defer></script></body>
+    <script>
+      var $container = $(".container");
+      var $drone = $(".drone");
+      var droneCenter = {
+        x: $drone.width() / 2,
+        y: $drone.height() / 2,
+      };
+
+      $container.on("mousemove", function (event) {
+        $drone.css(
+          "transform",
+          `translate3d(${event.offsetX - droneCenter.x}px, ${
+            event.offsetY - droneCenter.y
+          }px, 0)`
+        );
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  <script src="runtime.d1a429932b7eac3e7eea.js" defer></script><script src="polyfills.e24f10c4420990984240.js" defer></script><script src="main.60fe4b5dad2931471df3.js" defer></script></body>
 </html>
